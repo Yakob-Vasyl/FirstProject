@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Audio_Shop:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="Maven_Maping-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Audio_Shop:war exploded" />
+    </root>
+  </artifact>
+</component>
