@@ -1,26 +1,20 @@
 package audioshop.controller.user;
 
-import audioshop.entity.Brands;
-import audioshop.entity.Format;
-import audioshop.entity.Player;
+import audioshop.entity.ShopingCart;
 import audioshop.entity.User;
-import audioshop.service.*;
+import audioshop.service.PlayerService;
+import audioshop.service.ShopingCartService;
+import audioshop.service.UserService;
 import audioshop.validator.UserValidator;
-import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.method.P;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.bind.support.SessionStatus;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.validation.Valid;
-import java.util.List;
-import java.util.Locale;
+import java.security.Principal;
+import java.util.stream.Collectors;
 
 /**
  * Created by vasya on 008 08 02 2017.
@@ -34,55 +28,18 @@ public class IndexController {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private ShopingCartService cartService;
 
     @InitBinder("user")
     protected void bind(WebDataBinder binder) {
         binder.setValidator(new UserValidator(userService));
     }
 
-
-    //
-//    @Autowired
-//    private FormatService formatService;
-//
-//    @Autowired
-//    private ConnectionService connectionService;
-//
-//    @Autowired
-//    private BrandsService brandsService;
-
     @GetMapping
     public String index(Model model) {
         return "user-index";
     }
-
-    /* @RequestMapping(value = "/subCategoryPlayer/{subcategory}")
-     public String player( @PathVariable String subcategory, Model model) {
-         List<Player> playerList = playerService.findPlayersWithCategory(subcategory);
-         model.addAttribute("players", playerList);
-         // model.addAttribute("formats", player.getFormats());
-         // model.addAttribute("connections", player.getConnections());
-         return "user-subCategoryPlayer";
-     }*/
-    /*@RequestMapping(value = "/SubCategoryPlayer")
-    public String playerCategory() {
-        return "user-subCategoryPlayer";
-    }
-
-    @RequestMapping(value = "/SubCategoryPlayer/{subCategory}")
-    public String player(@PathVariable String subCategory, Model model) {
-        List<Player> playerList = playerService.findPlayersWithCategory(subCategory);
-        model.addAttribute("players", playerList);
-        // model.addAttribute("formats", player.getFormats());
-        // model.addAttribute("connections", player.getConnections());
-        return "user-subCategoryPlayer";
-    }
-    @RequestMapping(value = "/Format/{id}")
-    public String showFormat(@PathVariable int id,Model model) {
-        Format format = formatService.fetchFormatWithPlayers(id);
-        model.addAttribute("players", format.getPlayers());
-        return "user-playerThisWhithThisFormat";
-    }*/
 
     @RequestMapping(value = "/admin")
     public String admin() {
@@ -106,5 +63,22 @@ public class IndexController {
         return "user-login";
     }
 
+    @GetMapping("/basket")
+    public String showBasket(Model model, Principal principal) {
+        String email = principal.getName();
+        audioshop.entity.User user = userService.findByEmail(email);
+        model.addAttribute("user", user);
+        model.addAttribute("userName", principal.getName());
+        model.addAttribute("shopingCart", user.getShopingCarts());
+        return "user-basket";
     }
+
+    @GetMapping("/basket/delete/{id}")
+    public String deleteCart(@PathVariable int id) {
+        cartService.delete(id);
+        return "redirect:/basket";
+    }
+}
+
+
 

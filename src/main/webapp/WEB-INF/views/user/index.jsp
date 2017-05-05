@@ -16,21 +16,30 @@
     <div class="col-md-24 ">
         <div class="row">
             <div class="col-md-12 main-container">
-                <a href="/CategoryPlayer"> <img class="img-responsive center-block" src="images/Player.jpg">
-                <%--<div class="col-md-3 col-xs-3"><img src="/images/player/${player.id}.jpg?version=${player.version}" width="100%"></div>--%>
+                <a href="/CategoryPlayer">
+                    <img class="img-responsive center-block" src="images/Player.jpg">
                     <h3 class="text-center">Програвачі</h3>
                 </a>
             </div>
             <div class="col-md-12 main-container">
-                <a href="/CategorySpeakers"><h3>Акустичні системи</h3></a>
+                <a href="/CategorySpeakers">
+                    <img class="img-responsive center-block" src="images/Speakers.jpg">
+                    <h3 class="text-center">Акустичні системи</h3>
+                </a>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12 main-container">
-                <a href="/CategoryHeadphone"><h3>Наушники</h3></a>
+                <a href="/CategoryHeadphone">
+                    <img class="img-responsive center-block" src="images/Headphone.jpeg">
+                    <h3 class="text-center">Наушники</h3>
+                </a>
             </div>
             <div class="col-md-12 main-container">
-                <a href="/CategoryCord"><h3>Кабелі</h3></a>
+                <a href="/CategoryCord">
+                    <img class="img-responsive center-block" src="images/Cord.jpg">
+                    <h3 class="text-center">Кабелі</h3>
+                </a>
             </div>
         </div>
 

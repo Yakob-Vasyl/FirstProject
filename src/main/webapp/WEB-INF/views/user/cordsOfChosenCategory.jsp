@@ -5,7 +5,7 @@
 <%@ taglib uri="/WEB-INF/custom.tld" prefix="custom"%>
 
 <div class="row">
-    <div class="col-md-3 hidden-xs hidden-sm">
+    <div class="col-md-6 hidden-xs hidden-sm">
         <div class="row sidebar">
             <div class="row sidebar-top">
                 <div class="col-md-24 ">
@@ -51,7 +51,7 @@
                 <div class="col-md-8">
                     <img src="/images/cord/${cord.id}.jpg?version=${cord.version}">
                     <a href="/someCord/${cord.id}">${cord.brand.brand} ${cord.productName}</a>
-                    <span>${cord.price}</span>
+                    <span> Ціна - ${cord.price}</span>
                 </div>
             </c:forEach>
         </div>

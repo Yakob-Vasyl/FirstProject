@@ -121,9 +121,11 @@
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <sec:authorize access="isAuthenticated()">
+
                                 <sec:authorize access="hasRole('ROLE_ADMIN')">
                                  <li><a href="/admin">admin</a></li>
                                 </sec:authorize>
+
                                 <form:form action="/logout" method="POST">
                                    <li> <button type="submit" class="btn btn-link">Logout</button></li>
                                 </form:form>
@@ -136,19 +138,10 @@
                             </sec:authorize>
                         </ul>
                     </li>
-
                     <sec:authorize access="isAuthenticated()">
-                        <li><a href="" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" style="padding-right:5px"></span></a></li>
+                        <li><a href="/basket" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" style="padding-right:5px"></span></a></li>
                     </sec:authorize>
                 </ul>
-                <form class="navbar-form navbar-right hidden-sm hidden-xs " method="get">
-                    <div class="form-group">
-                        <input class="form-control" placeholder="Пошук" >
-                        <button type="submit" class="btn btn-primary form-control">
-                            <span class="glyphicon glyphicon-search" ></span>
-                        </button>
-                    </div>
-                </form>
             </div>
         </div>
     </nav>
