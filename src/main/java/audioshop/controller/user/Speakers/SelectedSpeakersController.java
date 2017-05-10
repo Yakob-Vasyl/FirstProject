@@ -29,7 +29,7 @@ public class SelectedSpeakersController {
     @GetMapping("/someSpeakers/{id}")
     public String show(@PathVariable int id, Model model) {
         Speakers speakers  = speakersService.findOne(id);
-        model.addAttribute("headphone", speakers);
+        model.addAttribute("speakers", speakers);
         return "user-someSpeakers";
     }
     @GetMapping("/buy/speakers/{id}")
@@ -41,7 +41,7 @@ public class SelectedSpeakersController {
         shopingCart.setProduct(product);
         shopingCart.setUser(user);
         cartService.save(shopingCart);
-        user.getShopingCarts().add(shopingCart);
+        //user.getShopingCarts().add(shopingCart);
         return show(id, model);
     }
 }

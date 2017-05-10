@@ -18,7 +18,6 @@
                 <img class="img-responsive" src="/images/cord/${cord.id}.jpg?version=${cord.version}">
             </div>
         </div>
-
         <div class="row">
             <div class="row">
                 <div class="col-md-6">
@@ -35,14 +34,15 @@
                     </sec:authorize>
                 </div>
             </div>
-            <h3>Характеристики</h3>
+            <div class="row">
+                <div class="col-md-24"><h3>Характеристики</h3></div>
+            </div>
             <div class="row sidebar-main">
 
                 <div class="col-md-16">
-
                     <div class="row">
                         <div class="col-md-6"><h4>Тип підключення</h4></div>
-                        <div class="col-md-6"><h4>${cord.connection.connection} кГц</h4></div>
+                        <div class="col-md-6"><h4>${cord.connection.connection}</h4></div>
                     </div>
 
                     <div class="row">
@@ -57,3 +57,4 @@
             </div>
         </div>
     </div>
+</div>

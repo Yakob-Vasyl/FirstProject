@@ -6410,6 +6410,14 @@ td.visible-print {
 /*серый фон текстовых полей*/
 /*серая рамка текстовых полей*/
 /*серый цвет текста в полях*/
+body {
+  /*// padding-bottom: 0;*/
+  /*            padding-top: 70px;*/
+}
+body .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
 body .no-list {
   list-style: none;
 }
@@ -6457,7 +6465,7 @@ body .main-container > img {
 body .main-container > h3 {
   color: #7e7e7e;
   font-size: 20px;
-  padding: 8px 0px 10px 20px ;
+  padding: 8px 0px 10px 20px;
 }
 body .form-signin {
   max-width: 600px;
@@ -6483,20 +6491,20 @@ body .form-registration > h2 {
 body .form-registration input {
   color: #6a6a6a;
 }
-body .navbar-fixed-bottom {
+body footer {
   background: #7e7e7e;
   color: #dbdbdb;
   font-size: 11px;
-  height: 105px;
+  height: 90px;
 }
-body .navbar-fixed-bottom a {
+body footer a {
   color: #dbdbdb;
 }
-body .navbar-fixed-bottom .sitemap a {
+body footer .sitemap a {
   display: block;
   font-size: 12px;
 }
-body .navbar-fixed-bottom .social .social-icon {
+body footer .social .social-icon {
   width: 30px;
   height: 30px;
   display: inline-block;

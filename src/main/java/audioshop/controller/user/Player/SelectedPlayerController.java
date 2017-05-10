@@ -45,7 +45,7 @@ public class SelectedPlayerController {
         shopingCart.setProduct(product);
         shopingCart.setUser(user);
         cartService.save(shopingCart);
-        user.getShopingCarts().add(shopingCart);
+       // user.getShopingCarts().add(shopingCart);
         return show(id, model);
     }
 }

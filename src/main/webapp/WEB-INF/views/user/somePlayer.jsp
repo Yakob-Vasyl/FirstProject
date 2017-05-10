@@ -31,11 +31,13 @@
             <div class="row">
                 <div class="col-md-6">
                     <sec:authorize access="isAuthenticated()">
-                            <a role="button" class="btn btn-primary" href="/buy/player/${player.id}">Додати до кошика</a>
+                        <a role="button" class="btn btn-primary" href="/buy/player/${player.id}">Додати до кошика</a>
                     </sec:authorize>
                 </div>
             </div>
-            <h3>Характеристики</h3>
+            <div class="row">
+                <div class="col-md-24"><h3>Характеристики</h3></div>
+            </div>
             <div class="row sidebar-main">
 
                 <div class="col-md-16">

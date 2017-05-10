@@ -35,7 +35,9 @@
                     </sec:authorize>
                 </div>
             </div>
-            <h3>Характеристики</h3>
+            <div class="row">
+                <div class="col-md-24"><h3>Характеристики</h3></div>
+            </div>
             <div class="row sidebar-main">
 
                 <div class="col-md-16">

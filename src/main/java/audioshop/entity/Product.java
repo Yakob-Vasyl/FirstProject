@@ -22,6 +22,9 @@ public class Product {
     @OneToMany(mappedBy = "product")
     private List<ShopingCart> shopingCarts;
 
+    public Product() {
+    }
+
     public int getId() {
         return id;
     }

@@ -85,10 +85,10 @@
                             <span>Наушники</span>
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/headphonesOfChosenCategory?categoryIdValue=11">Вкладиші</a></li>
-                            <li><a href="/headphonesOfChosenCategory?categoryIdValue=12">Вакуумні</a></li>
-                            <li><a href="/headphonesOfChosenCategory?categoryIdValue=13">Накладні</a></li>
-                            <li><a href="/headphonesOfChosenCategory?categoryIdValue=14">Безпровідні</a></li>
+                            <li><a href="/headphonesOfChosenCategory?categoryIdValue=13">Вкладиші</a></li>
+                            <li><a href="/headphonesOfChosenCategory?categoryIdValue=14">Вакуумні</a></li>
+                            <li><a href="/headphonesOfChosenCategory?categoryIdValue=15">Накладні</a></li>
+                            <li><a href="/headphonesOfChosenCategory?categoryIdValue=16">Безпровідні</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -101,12 +101,12 @@
                             <span>Кабелі</span>
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/cordsOfChosenCategory?categoryIdValue=15">Міжблокові кабелі</a></li>
-                            <li><a href="/cordsOfChosenCategory?categoryIdValue=16">Акустичні кабелі</a></li>
-                            <li><a href="/cordsOfChosenCategory?categoryIdValue=17">HDMI кабелі</a></li>
-                            <li><a href="/cordsOfChosenCategory?categoryIdValue=18">Цифрові кабелі</a></li>
-                            <li><a href="/cordsOfChosenCategory?categoryIdValue=19">Оптичні кабелі</a></li>
-                            <li><a href="/cordsOfChosenCategory?categoryIdValue=20">USB кабелі</a></li>
+                            <li><a href="/cordsOfChosenCategory?categoryIdValue=17">Міжблокові кабелі</a></li>
+                            <li><a href="/cordsOfChosenCategory?categoryIdValue=18">Акустичні кабелі</a></li>
+                            <li><a href="/cordsOfChosenCategory?categoryIdValue=19">HDMI кабелі</a></li>
+                            <li><a href="/cordsOfChosenCategory?categoryIdValue=20">Цифрові кабелі</a></li>
+                            <li><a href="/cordsOfChosenCategory?categoryIdValue=21">Оптичні кабелі</a></li>
+
                         </ul>
                     </li>
                 </ul>
